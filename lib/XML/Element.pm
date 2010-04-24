@@ -7,7 +7,7 @@ use HTML::Tagset ();
 use HTML::Element 3.08 ();
 
 use vars qw(@ISA $VERSION);
-$VERSION = '3.09';
+$VERSION = '3.10';
 @ISA = ('HTML::Element');
 
 # Init:
