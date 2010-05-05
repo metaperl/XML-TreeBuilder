@@ -21,16 +21,17 @@ my $builder = $class->new(
         'Test::Pod::Coverage' => 0,
         'Test::Perl::Critic'  => 0,
         'XML::Parser'         => 0,
-        'HTML::Element'       => 3.08,
+        'HTML::Element'       => 3.24,
         'HTML::Tagset'        => 3.02,
     },
     requires => {
         'XML::Parser'   => 0,
-        'HTML::Element' => 3.08,
+        'HTML::Element' => 3.24,
         'HTML::Tagset'  => 3.02,
     },
-    add_to_cleanup => [ 'XML-TreeBuilder-*', 'tmp', 'blib', 'MANIFEST.bak', 'META.yml' ],
-    script_files   => [],
+    add_to_cleanup =>
+        [ 'XML-TreeBuilder-*', 'tmp', 'blib', 'MANIFEST.bak', 'META.yml' ],
+    script_files => [],
 );
 
 $builder->create_build_script();

@@ -19,20 +19,18 @@ my $y = XML::Element->new_from_lol(
     [   'Gee',
         [ '~comment', { 'text' => ' myorp ' } ],
         [ 'foo', { 'Id' => 'me', 'xml:foo' => 'lal' }, 'Hello World' ],
-   ['lor'],
+        ['lor'],
         [ '~comment', { 'text' => ' foo ' } ],
         [ '~comment', { 'text' => ' glarg ' } ],
- ]
+    ]
 );
 
 ok( $x->same_as($y) );
 
 unless ( $ENV{'HARNESS_ACTIVE'} ) {
-  $x->dump;
-  $y->dump;
+    $x->dump;
+    $y->dump;
 }
-
-
 
 #print "\n", $x->as_Lisp_form, "\n";
 #print "\n", $x->as_XML, "\n\n";
@@ -59,8 +57,8 @@ $y = XML::Element->new_from_lol(
 
 ok( $x->same_as($y) );
 
-my $z = XML::TreeBuilder->new( { EncodeAmp => 1 } );
-$z->parse(qq{<p>Here &amp; There</p>});
-like( $z->as_XML(), qr{<p>Here &amp; There</p>}, 'Encoded ampersand' );
+my $z = XML::TreeBuilder->new({ NoExpand => 1 });
+$z->parse(qq{<p>Here &amp;foo; There</p>});
+like( $z->as_XML(), qr{<p>Here &amp;foo; There</p>}, 'Decoded ampersand' );
 
 __END__
