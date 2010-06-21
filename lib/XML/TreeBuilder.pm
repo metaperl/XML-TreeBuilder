@@ -9,7 +9,7 @@ use XML::Parser  ();
 use Carp;
 use vars qw(@ISA $VERSION);
 
-$VERSION = '3.10_1';
+$VERSION = '3.10';
 @ISA     = ('XML::Element');
 
 #==========================================================================
@@ -33,6 +33,7 @@ sub new {
     $self->{'NoExpand'}            = $NoExpand if ($NoExpand);
     $self->{'ErrorContext'}        = $ErrorContext if ($ErrorContext);
 
+    # have to let HTML::Element know there are encoded entities
     $XML::Element::encoded_content = ( $self->{'NoExpand'} || 0 );
 
     my @stack;
@@ -66,7 +67,7 @@ sub new {
 
             'Char' => sub {
 
-      # have to escape '&' if we have entities to catch things like &amp;foo;
+       # have to escape '&' if we have entities to catch things like &amp;foo;
                 if ( $_[1] eq '&' and $self->{'NoExpand'} ) {
                     $stack[-1]->push_content('&amp;');
                 }

@@ -57,8 +57,8 @@ $y = XML::Element->new_from_lol(
 
 ok( $x->same_as($y) );
 
-my $z = XML::TreeBuilder->new({ NoExpand => 1 });
-$z->parse(qq{<p>Here &amp;foo; There</p>});
+my $z = XML::TreeBuilder->new( { NoExpand => 1, ErrorContext => 2 } );
+$z->parsefile("t/parse_test.xml");
 like( $z->as_XML(), qr{<p>Here &amp;foo; There</p>}, 'Decoded ampersand' );
 
 __END__

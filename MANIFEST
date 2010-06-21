@@ -7,6 +7,7 @@ META.yml			Module meta-data (added by MakeMaker)
 README
 t/00about.t
 t/10main.t
+t/parse_test.xml
 t/zz_perlcritic.t
 t/zz_pod-coverage.t
 t/zz_pod.t
