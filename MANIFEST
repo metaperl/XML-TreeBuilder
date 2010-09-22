@@ -11,3 +11,4 @@ t/parse_test.xml
 t/zz_perlcritic.t
 t/zz_pod-coverage.t
 t/zz_pod.t
+Makefile.PL

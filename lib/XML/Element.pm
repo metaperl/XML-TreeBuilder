@@ -4,10 +4,10 @@ package XML::Element;
 use warnings;
 use strict;
 use HTML::Tagset ();
-use HTML::Element 3.24 ();
+use HTML::Element 4.0 ();
 
 use vars qw(@ISA $VERSION);
-$VERSION = '3.10';
+$VERSION = '3.10_2';
 @ISA     = ('HTML::Element');
 
 # Init:

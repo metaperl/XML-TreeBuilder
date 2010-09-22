@@ -12,7 +12,8 @@ my $builder = $class->new(
     module_name       => 'XML::TreeBuilder',
     license           => 'perl',
     dist_author       => 'Jeff Fearn <Jeff.Fearn@gmail.com>',
-    dist_version_from => 'lib/XML/TreeBuilder.pm',
+    dist_version_from => 'lib/XML/Element.pm',
+	create_makefile_pl => 'traditional',
     build_requires    => {
         'Devel::Cover'        => 0,
         'Module::Build'       => 0,
@@ -21,12 +22,12 @@ my $builder = $class->new(
         'Test::Pod::Coverage' => 0,
         'Test::Perl::Critic'  => 0,
         'XML::Parser'         => 0,
-        'HTML::Element'       => 3.24,
+        'HTML::Element'       => 4.0,
         'HTML::Tagset'        => 3.02,
     },
     requires => {
         'XML::Parser'   => 0,
-        'HTML::Element' => 3.24,
+        'HTML::Element' => 4.0,
         'HTML::Tagset'  => 3.02,
     },
     add_to_cleanup =>
