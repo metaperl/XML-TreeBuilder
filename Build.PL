@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use Module::Build;
+use 5.004;
 
 my $class = Module::Build->subclass(
     class => 'My::Builder',
@@ -29,6 +30,7 @@ my $builder = $class->new(
         'XML::Parser'   => 0,
         'HTML::Element' => 4.0,
         'HTML::Tagset'  => 3.02,
+        'perl'          => '5.4.0',
     },
     add_to_cleanup =>
         [ 'XML-TreeBuilder-*', 'tmp', 'blib', 'MANIFEST.bak', 'META.yml' ],
