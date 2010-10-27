@@ -34,7 +34,7 @@ sub new {
     $self->{'ErrorContext'}        = $ErrorContext if ($ErrorContext);
 
     # have to let HTML::Element know there are encoded entities
-    $XML::Element::encoded_content = ( $self->{'NoExpand'} || 0 );
+    $XML::Element::encoded_content = $NoExpand if ($NoExpand);
 
     my @stack;
 
