@@ -1,6 +1,6 @@
-2009-16-03   Jeff Fearn <Jeff.Fearn@gmail.com>
+Nov 24 2010  Jeff Fearn <Jeff.Fearn@gmail.com>
 
-   Release 3.10_3
+   Release 4.0
 
    Added NoExpand option to allow entities to be left untouched in xml.
    Added ErrorContext option to allow better reporting of error locations.

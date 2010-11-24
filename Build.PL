@@ -10,12 +10,12 @@ my $class = Module::Build->subclass(
 );
 
 my $builder = $class->new(
-    module_name       => 'XML::TreeBuilder',
-    license           => 'perl',
-    dist_author       => 'Jeff Fearn <Jeff.Fearn@gmail.com>',
-    dist_version_from => 'lib/XML/Element.pm',
-	create_makefile_pl => 'traditional',
-    build_requires    => {
+    module_name        => 'XML::TreeBuilder',
+    license            => 'perl',
+    dist_author        => 'Jeff Fearn <Jeff.Fearn@gmail.com>',
+    dist_version_from  => 'lib/XML/Element.pm',
+    create_makefile_pl => 'traditional',
+    build_requires     => {
         'Devel::Cover'        => 0,
         'Module::Build'       => 0,
         'Test::Exception'     => 0,
