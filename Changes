@@ -3,6 +3,7 @@ Mar 13 2011 Jeff Fearn <Jeff.Fearn@gmail.com>
 
    Doc typo fixes. (Ansgar Burchardt) RT #66404
    Use same version in all packages for CPAN indexing. RT #66111
+   Moved perlcritic tests to xt/author
 
 Nov 24 2010  Jeff Fearn <Jeff.Fearn@gmail.com>
 
