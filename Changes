@@ -1,5 +1,5 @@
 Mar 13 2011 Jeff Fearn <Jeff.Fearn@gmail.com>
-   Release 4.1 (UNRELEASED)
+   Release 4.1
 
    Doc typo fixes. (Ansgar Burchardt) RT #66404
    Use same version in all packages for CPAN indexing. RT #66111
